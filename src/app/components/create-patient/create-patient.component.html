@@ -1,0 +1,51 @@
+<div class="pfrm">
+    <h3>Create Patient Information</h3>
+    <br>
+    <form class="form-horizontal" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+          <label class="col-md-6 control-label" for="pname">Name</label>  
+          <div class="col-md-6">
+          <input id="pname" name="pname" type="text" placeholder="" class="form-control input-md" required=""
+          [(ngModel)] = "patient.name">
+          </div>
+        </div>
+        <br>
+        <div class="form-group">
+          <label class="col-md-6 control-label" for="age">Age</label>  
+          <div class="col-md-6">
+          <input id="age" name="age" type="number" class="form-control input-md" required=""
+          [(ngModel)] = "patient.age">
+          </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="visitedDoctor" class="col-md-6 control-label">Visited Doctor</label>
+            <select class="form-control" name="visitedDoctor" id="visitedDoctor" required="required" aria-required="true" [(ngModel)] = "patient.visitedDoctor">
+                <option *ngFor="let doc of doctors" [value]="doc.name">
+                    {{doc.name}}
+                </option>
+            </select>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="dov" class="col-md-6 control-label">Date of Visit</label>
+            <input type="date" class="form-control" name="dov" access="false" id="dov" required="required" aria-required="true"
+            [(ngModel)] = "patient.dateofVisit">
+        </div>
+        <br>
+        <div class="form-group">
+          <label class="col-md-6 control-label" for="dp">Doctor Prescription</label>
+          <div class="col-md-6">                     
+            <textarea class="form-control" id="dp" name="dp" [(ngModel)] = "patient.docPres"></textarea>
+          </div>
+        </div>
+        <br><br>
+    <div class="form-group">
+      <div class="col-md-6">
+        <button id="submit" name="submit" class="btn btn-success" type="submit">Submit</button>&nbsp;
+        <button id="reset" name="reset" class="btn btn-inverse" type="reset">Reset</button>
+      </div>
+    </div>
+    </form>        
+</div>

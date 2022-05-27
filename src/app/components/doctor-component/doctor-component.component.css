@@ -1,0 +1,12 @@
+.showdoc{
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 2%;
+    margin-bottom: 0.5%;
+    width: 50%;
+    border: 3px solid green;
+    padding: 50px;
+  }
+  .showdoc h3{
+      text-align: center;
+  }

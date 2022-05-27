@@ -1,0 +1,15 @@
+<div class="showdoc">
+    <h3>Select a Doctor to show information.</h3>
+    <br>
+        <div class="form-group">
+            <label for="doctor" class="col-md-6 control-label">Doctors</label>
+            <select class="form-control" name="doctor" id="doctor" required="required" aria-required="true"  
+            [(ngModel)] = "doctor.name">
+                <option *ngFor="let doc of doctors" [value]="doc.name">
+                    {{doc.name}}
+                </option>
+            </select>
+        </div>
+        <br><br>
+    <button (click)="showdoc(doctor.name)"  id="submit" name="submit" class="btn btn-success">Select</button>&nbsp;
+</div>

@@ -1,0 +1,56 @@
+<div class="dfrm">
+<h3>Create Doctor Information</h3>
+<br>
+<form class="form-horizontal" (ngSubmit)="onSubmit()">
+
+
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="dname">Name</label>  
+      <div class="col-md-6">
+      <input id="dname" name="dname" type="text"  class="form-control input-md" required="" 
+            [(ngModel)] = "doctor.name">
+         
+      </div>
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="age">Age</label>  
+      <div class="col-md-6">
+      <input id="age" name="age" type="number" class="form-control input-md" required=""
+      [(ngModel)] = "doctor.age">
+        
+      </div>
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="gender">Gender</label>
+      <div class="col-md-6"> 
+        <label class="radio-inline" for="gender-0">
+          <input type="radio" name="gender" id="gender-0" value="Male" checked="checked" [(ngModel)] = "doctor.gender">
+          Male &nbsp;
+        </label> 
+        <label class="radio-inline" for="gender-1">
+          <input type="radio" name="gender" id="gender-1" value="Female" [(ngModel)] = "doctor.gender">
+          Female
+        </label>
+      </div>
+    </div>
+    <br>
+    <div class="form-group">
+      <label class="col-md-6 control-label" for="specField">Specialization Field</label>  
+      <div class="col-md-6">
+      <input id="specField" name="specField" type="text"  class="form-control input-md" required="" [(ngModel)] = "doctor.specField">
+        
+      </div>
+    </div>
+    <br><br>
+    <div class="form-group">
+      <div class="col-md-6">
+        <button id="submit" name="submit" class="btn btn-success" type="submit">Submit</button>&nbsp;
+        <button id="reset" name="reset" class="btn btn-inverse" type="reset">Reset</button>
+      </div>
+    </div>
+</form>
+</div>

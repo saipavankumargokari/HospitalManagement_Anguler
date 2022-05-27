@@ -1,0 +1,12 @@
+<div class="showpatient">
+    <h3>Enter the Id of the patient to show the information</h3>
+    <br>
+    <div class="form-group">
+        <label class="col-md-6 control-label" for="age">Patient ID</label>  
+        <div class="col-md-6">
+        <input id="age" name="age" type="number" class="form-control input-md" required=""
+        [(ngModel)] = "id">
+        </div>
+        <br><br>
+    <button (click)="showpatient(id)"  id="submit" name="submit" class="btn btn-success">Select</button>&nbsp;
+</div>
